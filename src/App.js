@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import Loader from "./loader.gif";
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
   function searchFilter() {
     var search = document.getElementById('inp_search').value.trim().toLowerCase();
     var contents = document.getElementById('card_container_id').children;
-    for (var i = 0; i < contents.length; ++i) {
+    var i = 0;
+    while ( i < contents.length) {
       var cardItem = document.getElementsByClassName("emoji_name")[i].innerText.trim().toLowerCase();
       if (cardItem.includes(search)) {
         contents[i].style.display = "";
@@ -25,6 +27,7 @@ function App() {
       else {
         contents[i].style.display = "none";
       }
+      i++;
     }
   }
 
@@ -39,8 +42,9 @@ function App() {
     }
   }
 
-
-
+  function loading(){
+    document.getElementById("loader").style.display = "none";
+  }
 
   return (
     <>
@@ -49,8 +53,8 @@ function App() {
         <p className="app_desc">A simple emoji search app made in ReactJs.</p>
         <input type="search" id="inp_search" placeholder="Search for a Emoji" onChange={searchFilter} />
         <p className="copy_icon"><i className="far fa-clone"></i> Click on Emoji To Copy.</p>
-        <div className="card_container" id="card_container_id">
-        
+        <div id="loader"></div>
+        <div className="card_container" id="card_container_id" onLoad={loading}>
           {
             data && data.map((ele) => {
               return (
