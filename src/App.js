@@ -17,7 +17,7 @@ function App() {
   function searchFilter() {
     var search = document.getElementById('inp_search').value.trim().toLowerCase();
     var contents = document.getElementById('card_container_id').children;
-    for (var i = 0; i < contents.length; i++) {
+    for (var i = 0; i < contents.length; ++i) {
       var cardItem = document.getElementsByClassName("emoji_name")[i].innerText.trim().toLowerCase();
       if (cardItem.includes(search)) {
         contents[i].style.display = "";
