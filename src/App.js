@@ -28,17 +28,33 @@ function App() {
     }
   }
 
+  function copyClipboard() {
+    const element = document.getElementsByClassName('card_item');
+    for (var j = 0; j < element.length; j++) {
+      const cardClicked = (k) => {
+        var copyText = document.getElementsByClassName('card_item')[k].children[0].innerText;
+        navigator.clipboard.writeText(copyText);
+      }
+      element[j].addEventListener("click", cardClicked.bind(this, j), false);
+    }
+  }
+
+
+
+
   return (
     <>
       <div className="container">
         <h1 className="title">Emoji Search App</h1>
         <p className="app_desc">A simple emoji search app made in ReactJs.</p>
         <input type="search" id="inp_search" placeholder="Search for a Emoji" onChange={searchFilter} />
+        <p className="copy_icon"><i className="far fa-clone"></i> Click on Emoji To Copy.</p>
         <div className="card_container" id="card_container_id">
+        
           {
             data && data.map((ele) => {
               return (
-                <div className="card_item" title="Click to Copy">
+                <div className="card_item" onClick={copyClipboard} title="Click to Copy">
                   <p className="emoji_icon">{ele.character}</p>
                   <p className="emoji_name">{ele.unicodeName}</p>
                 </div>
