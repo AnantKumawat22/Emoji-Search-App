@@ -45,7 +45,7 @@ function App() {
       <div className="container">
         <h1 className="title">Emoji Search App</h1>
         <p className="app_desc">A simple emoji search app made in ReactJs.</p>
-        <input type="search" id="inp_search" placeholder="Search for a Emoji...It may take 4-5sec to search..!!" onChange={searchFilter} />
+        <input type="search" id="inp_search" placeholder="Search for a Emoji...It may take 4-5s." onChange={searchFilter} />
         <p className="copy_icon"><i className="far fa-clone"></i> Click on Emoji To Copy.</p>
         <div className="card_container" id="card_container_id">
           {
