@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Emoji-Search-App/static/css/main.69fa566b.chunk.css",
-    "main.js": "/Emoji-Search-App/static/js/main.ccc40488.chunk.js",
-    "main.js.map": "/Emoji-Search-App/static/js/main.ccc40488.chunk.js.map",
+    "main.css": "/Emoji-Search-App/static/css/main.96aff01b.chunk.css",
+    "main.js": "/Emoji-Search-App/static/js/main.4c3b25fb.chunk.js",
+    "main.js.map": "/Emoji-Search-App/static/js/main.4c3b25fb.chunk.js.map",
     "runtime-main.js": "/Emoji-Search-App/static/js/runtime-main.6778be4e.js",
     "runtime-main.js.map": "/Emoji-Search-App/static/js/runtime-main.6778be4e.js.map",
-    "static/js/2.3106145c.chunk.js": "/Emoji-Search-App/static/js/2.3106145c.chunk.js",
-    "static/js/2.3106145c.chunk.js.map": "/Emoji-Search-App/static/js/2.3106145c.chunk.js.map",
+    "static/js/2.47b38606.chunk.js": "/Emoji-Search-App/static/js/2.47b38606.chunk.js",
+    "static/js/2.47b38606.chunk.js.map": "/Emoji-Search-App/static/js/2.47b38606.chunk.js.map",
     "index.html": "/Emoji-Search-App/index.html",
-    "static/css/main.69fa566b.chunk.css.map": "/Emoji-Search-App/static/css/main.69fa566b.chunk.css.map",
-    "static/js/2.3106145c.chunk.js.LICENSE.txt": "/Emoji-Search-App/static/js/2.3106145c.chunk.js.LICENSE.txt"
+    "static/css/main.96aff01b.chunk.css.map": "/Emoji-Search-App/static/css/main.96aff01b.chunk.css.map",
+    "static/js/2.47b38606.chunk.js.LICENSE.txt": "/Emoji-Search-App/static/js/2.47b38606.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6778be4e.js",
-    "static/js/2.3106145c.chunk.js",
-    "static/css/main.69fa566b.chunk.css",
-    "static/js/main.ccc40488.chunk.js"
+    "static/js/2.47b38606.chunk.js",
+    "static/css/main.96aff01b.chunk.css",
+    "static/js/main.4c3b25fb.chunk.js"
   ]
 }
