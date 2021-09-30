@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
+import Loader from "./loader1.gif";
 
 function App() {
   const [data, setData] = useState(null);
@@ -26,6 +27,11 @@ function App() {
     }
   }
 
+  // function funloader() {
+  //   console.log("heloooleo...");
+  //   document.getElementById("loading_div").style.display = "none";
+  // }
+
   return (
     <>
       <div className="container">
@@ -35,9 +41,13 @@ function App() {
         <p className="copy_icon">
           <i className="far fa-clone"></i> Click on Emoji To Copy.
         </p>
+        <div id="loading_div">
+          <img src={Loader} alt="Loading" className="load_class" />
+        </div>
         <div className="card_container" id="card_container_id">
           {data &&
             data.map((ele) => {
+              document.getElementById("loading_div").style.display = "none";
               if (search === null || ele.unicodeName.toLowerCase().includes(search.toLowerCase()))
                 return (
                   <div className="card_item" onClick={copyClipboard} title="Click to Copy">
