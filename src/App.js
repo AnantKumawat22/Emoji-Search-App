@@ -38,7 +38,7 @@ function App() {
         <div className="card_container" id="card_container_id">
           {data &&
             data.map((ele) => {
-              if (search === null || ele.unicodeName.toLowerCase().includes(search))
+              if (search === null || ele.unicodeName.toLowerCase().includes(search.toLowerCase()))
                 return (
                   <div className="card_item" onClick={copyClipboard} title="Click to Copy">
                     <p className="emoji_icon">{ele.character}</p>
