@@ -5,6 +5,7 @@ import axios from 'axios';
 
 function App() {
 
+  const [input, setInput] = useState("");
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -18,7 +19,7 @@ function App() {
     var search = document.getElementById('inp_search').value.trim().toLowerCase();
     var contents = document.getElementById('card_container_id').children;
     var i = contents.length - 1;
-     do {
+    do {
       var cardItem = document.getElementsByClassName("emoji_name")[i].innerText.trim().toLowerCase();
       if (cardItem.includes(search)) {
         contents[i].style.display = "";
@@ -27,6 +28,17 @@ function App() {
         contents[i].style.display = "none";
       }
     } while (i--);
+  }
+
+  function checker() {
+    var contents = document.getElementById('card_container_id').children;
+    var check = document.getElementById('inp_search').value;
+    if (check == "") {
+      var i = contents.length - 1;
+      do {
+        contents[i].style.display = "";
+      } while (i--);
+    }
   }
 
   function copyClipboard() {
@@ -45,7 +57,10 @@ function App() {
       <div className="container">
         <h1 className="title">Emoji Search App</h1>
         <p className="app_desc">A simple emoji search app made in ReactJs.</p>
-        <input type="search" id="inp_search" placeholder="Search for a Emoji...It may take 4-5s." onChange={searchFilter} />
+        <div className="input_div">
+          <input type="search" id="inp_search" placeholder="Search for a Emoji" onInput={input} onChange={checker} />
+          <button onClick={searchFilter} className="search_btn">Search</button>
+        </div>
         <p className="copy_icon"><i className="far fa-clone"></i> Click on Emoji To Copy.</p>
         <div className="card_container" id="card_container_id">
           {
