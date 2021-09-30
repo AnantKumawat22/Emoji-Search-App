@@ -5,7 +5,6 @@ import axios from 'axios';
 
 function App() {
 
-  const [input, setInput] = useState("");
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -58,7 +57,7 @@ function App() {
         <h1 className="title">Emoji Search App</h1>
         <p className="app_desc">A simple emoji search app made in ReactJs.</p>
         <div className="input_div">
-          <input type="search" id="inp_search" placeholder="Search for a Emoji" onInput={input} onChange={checker} />
+          <input type="search" id="inp_search" placeholder="Search for a Emoji" onChange={checker} />
           <button onClick={searchFilter} className="search_btn">Search</button>
         </div>
         <p className="copy_icon"><i className="far fa-clone"></i> Click on Emoji To Copy.</p>
